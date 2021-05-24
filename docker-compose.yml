@@ -4,6 +4,8 @@ mysql:
     - "./volume/mysql:/var/lib/mysql"
   environment:
     - MYSQL_ROOT_PASSWORD=password
+  ports:
+    - 3306
 
 phpmyadmin:
   build: ./compose/phpmyadmin
@@ -18,3 +20,12 @@ phpmyadmin:
      - 8080:80
   volumes:
      - "./volume/phpmyadmin/sessions:/sessions"
+
+node:
+  build: ./compose/node
+  devices:
+    - "/dev/gpiomem:/dev/gpiomem"
+    - "/dev/i2c-1:/dev/i2c-1"
+  ports:
+    - 1880:1880
+  #tty: true
