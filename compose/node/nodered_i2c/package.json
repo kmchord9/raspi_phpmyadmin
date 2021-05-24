@@ -1,0 +1,13 @@
+{
+    "name": "node-red-project",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "node-red-contrib-gpio": "^0.51.0",
+        "node-red-contrib-i2c": "~0.8.2",
+        "node-red-dashboard": "~2.29.0",
+        "node-red-node-mysql": "~0.1.8",
+        "raspi-io": "^11.0.0"
+    }
+}
