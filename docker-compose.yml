@@ -3,9 +3,10 @@ mysql:
   volumes:
     - "./volume/mysql:/var/lib/mysql"
   environment:
-    - MYSQL_ROOT_PASSWORD=password
+    MYSQL_ROOT_PASSWORD: password
+    TZ : Asia/Tokyo
   ports:
-    - 3306
+    - 3306:3306
 
 phpmyadmin:
   build: ./compose/phpmyadmin
