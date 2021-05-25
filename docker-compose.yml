@@ -15,6 +15,16 @@ phpmyadmin:
   links:
     - mysql
   ports:
-     - 8080:80
+    - 8080:80
   volumes:
-     - "./volume/phpmyadmin/sessions:/sessions"
+    - "./volume/phpmyadmin/sessions:/sessions"
+
+nodered:
+  image: nodered/node-red:latest
+  environment:
+    - TZ=Aisa/Tokyo
+  ports:
+    - "1880:1880"
+  volumes:
+    - ./volume/node/node-red-data:/data
+
