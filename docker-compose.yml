@@ -2,6 +2,7 @@ mysql:
   image: hypriot/rpi-mysql
   volumes:
     - "./volume/mysql:/var/lib/mysql"
+    - "./compose/node/init:/docker-entrypoint-initdb.d"
   environment:
     MYSQL_ROOT_PASSWORD: password
     TZ : Asia/Tokyo
@@ -22,11 +23,11 @@ phpmyadmin:
   volumes:
      - "./volume/phpmyadmin/sessions:/sessions"
 
-node:
-  build: ./compose/node
-  devices:
-    - "/dev/gpiomem:/dev/gpiomem"
-    - "/dev/i2c-1:/dev/i2c-1"
-  ports:
-    - 1880:1880
-  tty: true
+#node:
+#  build: ./compose/node
+#  devices:
+#    - "/dev/gpiomem:/dev/gpiomem"
+#    - "/dev/i2c-1:/dev/i2c-1"
+#  ports:
+#    - 1880:1880
+#  tty: true
