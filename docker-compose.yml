@@ -23,6 +23,19 @@ phpmyadmin:
   volumes:
      - "./volume/phpmyadmin/sessions:/sessions"
 
+node-red:
+  #image: nodered/node-red:latest
+  build: ./compose/node
+  environment:
+    - TZ=Aisa/Tokyo
+  ports:
+    - "1880:1880"
+  #networks:
+  #  - node-red-net
+  #volumes:
+  #  - ./compose/node/node-red-data:/data
+
+
 #node:
 #  build: ./compose/node
 #  devices:
