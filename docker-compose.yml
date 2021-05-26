@@ -2,7 +2,7 @@ mysql:
   image: hypriot/rpi-mysql
   volumes:
     - "./volume/mysql:/var/lib/mysql"
-    - "./compose/node/init:/docker-entrypoint-initdb.d"
+    - "./compose/mysql/init:/docker-entrypoint-initdb.d"
   environment:
     MYSQL_ROOT_PASSWORD: password
     TZ : Asia/Tokyo
