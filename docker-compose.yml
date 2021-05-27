@@ -2,8 +2,11 @@ mysql:
   image: hypriot/rpi-mysql
   volumes:
     - "./volume/mysql:/var/lib/mysql"
-    - "./compose/mysql/init:/docker-entrypoint-initdb.d"
+    #- "./compose/mysql/init:/docker-entrypoint-initdb.d"
   environment:
+    MYSQL_DATABASE: temp
+    MYSQL_USER: tempuser
+    MYSQL_PASSWORD: password
     MYSQL_ROOT_PASSWORD: password
     TZ : Asia/Tokyo
   ports:
@@ -30,10 +33,13 @@ node-red:
     - TZ=Aisa/Tokyo
   ports:
     - "1880:1880"
-  #networks:
+  devices:
+    - "/dev/gpiomem:/dev/gpiomem"
+    - "/dev/i2c-1:/dev/i2c-1"
+# #networks:
   #  - node-red-net
-  #volumes:
-  #  - ./compose/node/node-red-data:/data
+  volumes:
+    - ./volume/node/node-red-data:/data
 
 
 #node:
