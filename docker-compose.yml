@@ -7,9 +7,9 @@ services:
       - "./volume/mysql:/var/lib/mysql"
       - "./compose/mysql/init:/docker-entrypoint-initdb.d"
     environment:
-      MYSQL_DATABASE: temp
-      MYSQL_USER: tempuser
-      MYSQL_PASSWORD: password 
+      #MYSQL_DATABASE: temp
+      #MYSQL_USER: tempuser
+      #MYSQL_PASSWORD: password 
       MYSQL_ROOT_PASSWORD: password
       TZ : Asia/Tokyo
     ports:
