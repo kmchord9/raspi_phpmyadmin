@@ -13,7 +13,7 @@ services:
       MYSQL_ROOT_PASSWORD: password
       TZ : Asia/Tokyo
     ports:
-      - 3306
+      - 3000:3306
     networks:
       app_net:
         ipv4_address: 172.30.0.2
