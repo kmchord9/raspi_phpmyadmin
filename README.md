@@ -1,10 +1,10 @@
 # raspi_phpmyadmin
 
 # 内容
-ラズベリーパイにてnode-redとmysqlとphpmyadminの3つをdockerにて起動させます。
-node-red: ビジュアルプログラミング
-mysql   : データベース
-phpmyadmin: データベース管理
+ラズベリーパイにてnode-redとmysqlとphpmyadminの3つをdockerにて起動させます。<br>
+node-red: ビジュアルプログラミング<br>
+mysql   : データベース<br>
+phpmyadmin: データベース管理<br>
 
 # 環境
 dockerとdocker-composeが必要になります。
