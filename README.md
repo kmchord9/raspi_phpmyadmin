@@ -9,9 +9,10 @@ phpmyadmin: データベース管理<br>
 # 環境
 dockerとdocker-composeが必要になります。
 下記のコードで環境を構築できます。
-
+usernameは使用しているユーザー名を入れてください
 ```
 curl -sSL https://get.docker.com | sh
+sudo usermod -aG docker username 
 sudo pip3 install docker-compose
 ```
 
