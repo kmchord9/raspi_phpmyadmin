@@ -19,7 +19,8 @@ services:
         ipv4_address: 172.30.0.2
 
   phpmyadmin:
-    build: ./compose/phpmyadmin
+    #build: ./compose/phpmyadmin
+    image: kmchord9/raspi_phpmyadmin:latest
     environment:
       - PMA_ARBITRARY=1
       - PMA_HOST=mysql
